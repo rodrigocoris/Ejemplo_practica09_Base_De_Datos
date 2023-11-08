@@ -58,5 +58,6 @@ public class Listado_Activity extends AppCompatActivity {
     public void regresarPrincipal(View view){
         Intent intent = new Intent(getApplicationContext(),MainActivity.class);
         startActivity(intent);
-    }
-}
+        finish();
+    }//listar Registros
+}//ListadoActivity

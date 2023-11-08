@@ -90,37 +90,38 @@ public class MainActivity extends AppCompatActivity {
         }//else
     }//registrar empleado
 
-    public void Buscar(View view){
-        //Establecer el modo de apertura de la base de datos en modo escritura
+    public void Buscar(View view) {
+        // Establecer el modo de apertura de la base de datos en modo escritura
         SQLiteDatabase bd = admin.getReadableDatabase();
 
-        //variable para busqueda de dato para obtener informacion
+        // Variable para búsqueda de dato para obtener información
         String nump = etNumEmp.getText().toString();
 
-        //validar que el campo no este  vacio
-        if(!nump.isEmpty()){
-            //objeto apunta al registro donde localice el dato, se le envia la instrucccion sql de busqueda
-            Cursor fila = bd.rawQuery("select nombre, apellidos,sueldo from empleado" + "where numemp="+nump,null);
+        // Validar que el campo no esté vacío
+        if (!nump.isEmpty()) {
+            // Objeto apunta al registro donde localice el dato, se le envía la instrucción SQL de búsqueda
+            Cursor fila = bd.rawQuery("SELECT nombre, apellidos, sueldo FROM empleado WHERE numemp = " + nump, null);
 
-            //valida
-            if(fila.moveToFirst()){
-                //se coloca en los componenes los valores encontrados
+            // Validar
+            if (fila.moveToFirst()) {
+                // Colocar en los componentes los valores encontrados
                 etNombre.setText(fila.getString(0));
                 etApellidos.setText(fila.getString(1));
                 etSueldo.setText(fila.getString(2));
-                //se cierra la base de datos
+                // Cerrar la base de datos
                 bd.close();
-            }else{
-                Toast.makeText(this,"Numero de empleado no existe",Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "Número de empleado no existe", Toast.LENGTH_SHORT).show();
                 etNumEmp.setText("");
                 etNumEmp.requestFocus();
                 bd.close();
-            }//else-if-fila
-        }else{
-            Toast.makeText(this,"Ingresa numero de empleado",Toast.LENGTH_SHORT).show();
+            }
+        } else {
+            Toast.makeText(this, "Ingresa número de empleado", Toast.LENGTH_SHORT).show();
             etNumEmp.requestFocus();
-        }//else
-    }//buscar empleado
+        }
+    }
+
 
     public void actualizarEmpleado(View view){
         //Establecr el modo de apertura d ela base de datos en modo escritura

@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             registro.put("numemp",nump);
             registro.put("nombre",nomp);
             registro.put("apellidos",apep);
-            registro.put("suedlo",suep);
+            registro.put("sueldo",suep);
 
             if(bd !=null){
                 //alamacenar los valores en la tabla

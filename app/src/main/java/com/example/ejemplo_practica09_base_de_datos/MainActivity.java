@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
             //validar su existieron registros a borrar
             if(cantidad > 0)
                 Toast.makeText(this,"Datos del empleado actualizados",Toast.LENGTH_SHORT).show();
-                Toast.makeText(this,"El numero de empleado no existe",Toast.LENGTH_SHORT).show();
+
 
         }else{
             Toast.makeText(this,"debes registrar primero los datos",Toast.LENGTH_SHORT).show();

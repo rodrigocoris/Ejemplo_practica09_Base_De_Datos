@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Gestion de empleados</string>
+    <string name="titulo">Gestion de empleados</string>
+    <string name="numEmp">Escribe numero de empleado</string>
+    <string name="nombre">Escribe nombre</string>
+    <string name="apellidos">Escribe apellidos</string>
+    <string name="sueldo">Ingresa sueldo</string>
+    <string name="agregar">Agregar</string>
+    <string name="buscar">Bsucar</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="lista">Lista</string>
+    <string name="detalle">Lista de empleados</string>
+    <string name="regreso">Regresar</string>
+</resources>
